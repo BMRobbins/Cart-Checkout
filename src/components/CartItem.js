@@ -1,10 +1,12 @@
+import React from "react";
+import classes from "./CartItem.module.css";
+
 import { useDispatch, useSelector } from "react-redux";
-import classes from "./MenuItem.module.css";
 import { FaPlusCircle, FaMinusCircle } from "react-icons/fa";
 import { cartActions } from "../store/cart-slice";
 
-const MenuItem = (props) => {
-  const { name, calories, price, description, id } = props;
+const CartItem = (props) => {
+  const { id, price, name } = props;
 
   const dispatch = useDispatch();
 
@@ -34,15 +36,9 @@ const MenuItem = (props) => {
   });
 
   return (
-    <div className={classes.menu_item_container}>
-      <div className={classes.details_container}>
-        <div className={classes.name_cal_container}>
-          <h3 className={`serif ${classes.name}`}>{props.name}</h3>
-          <p className={`san-serif ${classes.calories}`}>({calories} Cal)</p>
-        </div>
-        <p className={`san-serif ${classes.description}`}>{description}</p>
-        <p className={`san-serif ${classes.price}`}>${props.price}</p>
-      </div>
+    <div className={classes.item_container}>
+      <p className={`san-serif ${classes.item_name}`}>{name}</p>
+      <p className={`san-serif ${classes.item_quantity_price}`}>${price}</p>
       <div className={classes.item_action_container}>
         <FaMinusCircle
           className={classes.icons}
@@ -55,4 +51,4 @@ const MenuItem = (props) => {
   );
 };
 
-export default MenuItem;
+export default CartItem;

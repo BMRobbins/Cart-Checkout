@@ -1,8 +1,17 @@
 import React from "react";
 import classes from "./Header.module.css";
 import { FaShoppingCart } from "react-icons/fa";
+import { useSelector, useDispatch } from "react-redux";
+import { cartActions } from "../store/cart-slice";
 
 const Header = (props) => {
+  const cartQuantity = useSelector((state) => state.cart.totalQuantity);
+  const dispatch = useDispatch();
+  const showBannerHandler = () => {
+    console.log("hello");
+    dispatch(cartActions.showCart());
+  };
+
   return (
     <nav className={classes.navbar}>
       <div className={classes.name_container}>
@@ -11,10 +20,10 @@ const Header = (props) => {
       <div className={classes.cart_container}>
         <FaShoppingCart
           className={classes.cart_icon}
-          onClick={props.onShowCart}
+          onClick={showBannerHandler}
         />
         <div className={classes.cart_number_container}>
-          <p className={classes.cart_number}>0</p>
+          <p className={classes.cart_number}>{cartQuantity}</p>
         </div>
       </div>
     </nav>

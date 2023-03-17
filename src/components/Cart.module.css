@@ -37,11 +37,36 @@
   color: #f9dbbb;
 }
 
-.actions .button--alt {
-  color: #8a2b06;
+.cart_empty_container {
+  display: flex;
+  justify-content: center;
 }
 
-.actions .button {
-  background-color: #8a2b06;
-  color: white;
+.cart_empty_text {
+  color: gray;
+  margin: 25px 0 50px;
+}
+
+.cart_items {
+  display: flex;
+  flex-direction: column;
+  max-height: 340px;
+  overflow: auto;
+}
+
+.total,
+.total_amount {
+  font-size: 20px;
+}
+
+.total {
+  margin-right: 10px;
+}
+
+.total_container {
+  align-items: center;
+  border-top: 1px solid gray;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 25px;
 }

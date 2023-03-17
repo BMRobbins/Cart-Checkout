@@ -1,27 +1,23 @@
-import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
 import CenteredWrapper from "./components/common/UI/CenteredWrapper";
 import Cart from "./components/Cart";
+import ConfirmationBanner from "./components/ConfirmationBanner";
+import { useSelector } from "react-redux";
 
 function App() {
-  const [cartIsShown, setCartIsShown] = useState(false);
+  const shouldShowBanner = useSelector(
+    (state) => state.banner.shouldShowBanner
+  );
 
-  const showCartHandler = () => {
-    console.log("show Cart");
-    setCartIsShown(true);
-  };
-
-  const hideCartHandler = () => {
-    console.log("hide cart");
-    setCartIsShown(false);
-  };
+  const shouldShowCart = useSelector((state) => state.cart.cartIsShown);
 
   return (
     <>
-      {cartIsShown && <Cart onClose={hideCartHandler} />}
-      <Header onShowCart={showCartHandler} />
+      {shouldShowCart && <Cart />}
+      <Header />
+      {shouldShowBanner && <ConfirmationBanner />}
       <CenteredWrapper>
         <h1 className="serif">Menu</h1>
         <Menu />

@@ -1,0 +1,13 @@
+.confirmation_banner {
+  background-color: greenyellow;
+  display: flex;
+  justify-content: center;
+  margin: 20px 10px 0;
+  border-radius: 8px;
+}
+
+.banner_message {
+  margin: 10px;
+  font-size: 16px;
+  color: black;
+}
