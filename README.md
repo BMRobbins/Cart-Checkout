@@ -2,8 +2,29 @@
 
 ## This is an example of creating a cart checkout system using React and Redux
 
-In this project I used Redux to keep track of state managment for the cart and action banners.
-The user can add / remove items from the menu page or within the cart itself. Once a user removes all of one type of item the item is dynamically removed from the cart and the total. Confirming the order clears the state and shows a success banner for 10 seconds. 
+          The cart checkout project is an example react app that shows how to
+          use Redux for state management across large webpages. Redux is a state
+          management system that is used to store and retrieve data and reduce
+          the need for passing event handlers and data up/down the react
+          component tree. In this project, I used Redux to store menu items for
+          a fake burger shop. The user can add as many items as they want and
+          the cart and cart object counter will be updated in real time. The
+          user can add items on the menu items page and then checkout by
+          clicking on the cart icon at the upper right-hand side of the
+          navigation bar. Once the cart is open a user may reduce/increase the
+          number of a specific items in the cart. If any item reaches zero it is
+          removed from the cart menu. All items on checkout cart and menu page
+          stay up to date with each other. While the user is in the checkout
+          cart they have two options, to either hit the cancel button which
+          exits the cart and keeps the state of the menu items or they can hit
+          the confirm button and the cart is closed and the cart state is reset
+          to the initial state. Confirming the order will also display a banner
+          for ten seconds that states that the user has successfully placed an
+          order. I used react to store all state in this project including
+          storing/updating the cart items, resetting the cart items, showing the
+          cart and success banner. It should be noted that it may be better to
+          maximize the embedded editor to have a better view of the working
+          project. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
