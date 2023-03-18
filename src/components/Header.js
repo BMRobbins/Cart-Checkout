@@ -8,7 +8,6 @@ const Header = (props) => {
   const cartQuantity = useSelector((state) => state.cart.totalQuantity);
   const dispatch = useDispatch();
   const showBannerHandler = () => {
-    console.log("hello");
     dispatch(cartActions.showCart());
   };
 

@@ -22,7 +22,7 @@ const MenuItems = {
         name: "Bacon Burger",
         description:
           "This is our Bacon Burger with bacon, two pickles, ketchup and mustard on two sesame seed buns",
-        price: 3.99,
+        price: 4.99,
         calories: 920,
       },
     ],
