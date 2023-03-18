@@ -1,9 +1,18 @@
-# Getting Started with Create React App
+# Cart Checkout
+
+## This is an example of creating a cart checkout system using React and Redux
+
+In this project I used Redux to keep track of state managment for the cart and action banners.
+The user can add / remove items from the menu page or within the cart itself. Once a user removes all of one type of item the item is dynamically removed from the cart and the total. Confirming the order clears the state and shows a success banner for 10 seconds. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ![Screen Shot 2023-03-17 at 6 37 30 PM](https://user-images.githubusercontent.com/29494588/226073915-48f37dce-fcc3-44f1-acf4-9299760e077a.png)
+
 ![Screen Shot 2023-03-17 at 6 37 19 PM](https://user-images.githubusercontent.com/29494588/226073924-f2b209b1-8e99-4226-ae79-a1fe9e9ca3b0.png)
+
+![Screen Shot 2023-03-17 at 6 37 47 PM](https://user-images.githubusercontent.com/29494588/226074031-5fe1b6c3-15d8-48a4-b20c-5d99943337ba.png)
+
 ![Screen Shot 2023-03-17 at 6 38 24 PM](https://user-images.githubusercontent.com/29494588/226073934-bda47889-c58c-4a04-8b27-97bc788fc73b.png)
 ![Screen Shot 2023-03-17 at 6 39 01 PM](https://user-images.githubusercontent.com/29494588/226073945-af6374ce-9d79-4c2d-960b-3b0fcc27000b.png)
 
